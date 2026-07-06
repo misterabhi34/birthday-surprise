@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffe4ef" />
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loadingScreen" class="loading-screen">
+      <div class="heart-orbit" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <p>❤️ Loading a Special Surprise... ❤️</p>
+    </div>
+
+    <button id="musicToggle" class="music-toggle" type="button" aria-label="Toggle music">♫</button>
+    <audio id="birthdayMusic" src="music/birthday.mp3" loop preload="auto"></audio>
+
+    <div class="fx-hearts" aria-hidden="true"></div>
+    <canvas id="fireworksCanvas" class="fireworks-canvas" aria-hidden="true"></canvas>
+
+    <main class="site-shell" aria-live="polite">
+      <section id="pagePasscode" class="page page-passcode active">
+        <div class="soft-particles" aria-hidden="true"></div>
+        <div class="welcome-grid">
+          <figure class="polaroid hero-polaroid">
+            <!-- Edit this photo at: images/front-page.jpg -->
+            <img src="images/front-page.jpg" alt="Special memory" />
+            <figcaption>our favorite little moment</figcaption>
+          </figure>
+
+          <div id="keypadCard" class="glass-card pass-card">
+            <h1>A Special Surprise Just For You ❤️</h1>
+            <p class="section-label">Enter Passcode</p>
+            <div class="pass-dots" aria-label="Passcode progress">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <p id="passMessage" class="pass-message">Only the right date opens this heart.</p>
+            <div class="keypad">
+              <button data-key="1" type="button">1</button>
+              <button data-key="2" type="button">2</button>
+              <button data-key="3" type="button">3</button>
+              <button data-key="4" type="button">4</button>
+              <button data-key="5" type="button">5</button>
+              <button data-key="6" type="button">6</button>
+              <button data-key="7" type="button">7</button>
+              <button data-key="8" type="button">8</button>
+              <button data-key="9" type="button">9</button>
+              <button data-clear type="button">Clear</button>
+              <button data-key="0" type="button">0</button>
+              <button data-back type="button">Back</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pageBirthday" class="page page-birthday">
+        <div class="balloons" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="glass-card birthday-card">
+          <div class="cake" aria-hidden="true">
+            <div class="candles"><i></i><i></i><i></i></div>
+            <div class="cake-top"></div>
+            <div class="cake-body"></div>
+            <div class="cake-base"></div>
+          </div>
+          <!-- Edit birthday title/message here if needed -->
+          <h2 id="birthdayType" class="type-title" data-text="Happy Birthday ❤️"></h2>
+          <p>Wishing You Endless Happiness Today And Always.</p>
+          <button id="nextToMemories" class="glow-btn" type="button">Next ➜</button>
+        </div>
+      </section>
+
+      <section id="pageMet" class="page page-met">
+        <div class="memories-wrap">
+          <div class="photo-pair">
+            <figure class="polaroid met-photo first-photo">
+              <!-- Edit first memory photo at: images/the-day-we-met-1.jpg -->
+              <img src="images/the-day-we-met-1.jpg" alt="The day we met memory one" />
+            </figure>
+            <figure class="polaroid met-photo second-photo">
+              <!-- Edit second memory photo at: images/the-day-we-met-2.jpg -->
+              <img src="images/the-day-we-met-2.jpg" alt="The day we met memory two" />
+            </figure>
+          </div>
+
+          <h2 class="script-title met-title">The Day We Met ❤️</h2>
+
+          <article class="glass-card letter-card">
+            <!-- Edit the birthday letter below -->
+            <p>Happy Birthday Meri Permanent Duo... ❤️🎂</p>
+            <p>Pata hai... kabhi kabhi sochta hu ki sirf 2 mahine hi hue hain hame mile? 😂 Sach bolu to lagta hi nahi. Ye 2 mahine itne jaldi nikal gaye ki pata hi nahi chala. Aur itne kam time me aap meri life ka itna important part ban jayengi, ye maine kabhi socha bhi nahi tha.</p>
+            <p>Aap mere liye sirf ek ingame duo nahi hain. Aap meri bestfriend hain... meri favorite person hain. Aapke saath game khelna, masti karna, random baatein karna aur bas quality time spend karna... ye sab meri daily life ka ek part ban gaya hai. Aur sach bolu, mujhe ye routine bahut pasand hai.</p>
+            <p>Ek baat jo shayad maine kabhi properly boli hi nahi... Thank You. Thank you hamesha meri side lene ke liye. Chahe situation kuch bhi ho, aap hamesha mere saath khadi rahi hain. Aajkal aise log bahut mushkil se milte hain jo bina kisi wajah ke aapke liye stand lete hain. Isliye mai khud ko lucky maanta hu ki meri life me aap hain.</p>
+            <p>Aur haan... hamare beech fights bhi hui hain. Kabhi kabhi pura din baat bhi nahi hoti thi. Upar se mai dikhata tha ki mujhe koi farq nahi padta. 😂 Lekin andar se sach kuch aur hi hota tha. Aapke bina kisi cheez me mann hi nahi lagta tha. Game kholta tha to lagta tha kuch missing hai. Bas wait rehta tha ki kab fir se normal baat hogi. Shayad isi ko emotional attachment bolte hain.</p>
+            <p>Mujhe nahi pata future me meri life me kitne naye log aayenge. Shayad bahut saare. Lekin ek baat mai pure confidence ke saath bol sakta hu... aapki jagah koi nahi le sakta. Aap hamesha meri favorite person rahengi. Aur meri permanent duo bhi. Aapke baad mai kisi aur ko duo banane ka soch bhi nahi sakta, kyunki kuch log replace ho jaate hain... par aap unme se bilkul nahi hain. :)</p>
+            <p>Bas ek chhoti si wish hai... agar aapko kabhi koi problem na ho, to mai chahta hu ki ham  hamesha  aise hi rahe. Life me chahe kitne bhi naye log aa jayein, kitni bhi fights ho jayein ya kitna bhi busy ho jayein... bas hamari friendship kabhi khatam na ho.</p>
+            <p>Aur last me bas itna hi...</p>
+            <p>Thank You meri life ka itna important part banne ke liye. Thank You meri har bakchodi tolerate karne ke liye. Aur Thank You meri Permanent Duo banne ke liye. ❤️</p>
+            <p>Happy Birthday once again! Aur haan... apne is pagal duo ko kabhi mat bhulna wrna aapki pitti pitti kar dunga. 🫂❤️</p>
+          </article>
+
+          <button id="openGifts" class="glow-btn" type="button">🎁 Open Your Gifts</button>
+        </div>
+      </section>
+
+      <section id="pageGifts" class="page page-gifts">
+        <div id="giftsHome" class="gifts-home">
+          <h2 class="script-title">Choose Your Gift ❤️</h2>
+          <div class="gift-grid">
+            <button class="gift-box" data-gift="gallery" type="button"><span></span><b>Gift 1</b></button>
+            <button class="gift-box" data-gift="video" type="button"><span></span><b>Gift 2</b></button>
+            <button class="gift-box" data-gift="final" type="button"><span></span><b>Gift 3</b></button>
+          </div>
+        </div>
+
+        <div id="galleryPanel" class="gift-panel glass-card">
+          <button class="back-btn" data-back-gifts type="button">← Gifts</button>
+          <div class="gallery-frame">
+            <button id="prevSlide" class="slide-btn" type="button" aria-label="Previous image">‹</button>
+            <img id="galleryImage" src="" alt="Gift gallery memory" />
+            <button id="nextSlide" class="slide-btn" type="button" aria-label="Next image">›</button>
+          </div>
+          <div id="galleryDots" class="gallery-dots"></div>
+        </div>
+
+        <div id="videoPanel" class="gift-panel glass-card">
+          <button class="back-btn" data-back-gifts type="button">← Gifts</button>
+          <!-- Edit video at: videos/our-memories.mp4 -->
+          <video id="memoryVideo" src="videos/our-memories.mp4" controls playsinline preload="metadata"></video>
+          <h3 class="script-title small-script">Our Memories ❤️</h3>
+        </div>
+
+        <div id="finalPanel" class="gift-panel final-panel">
+          <div class="glass-card final-card">
+            <h2>❤️ You'll Always Be My Permanent Duo ❤️</h2>
+            <p>No matter how many people come into my life...<br />Your place can never be replaced. 🫂</p>
+            <button id="thankYouBtn" class="glow-btn" type="button">💖 Thank You For Everything</button>
+            <p id="theEnd" class="the-end">❤️ THE END ❤️</p>
+            <p id="bonusType" class="bonus-type" data-text="Thank You For Being My Favorite Person, My Best Friend, And My Permanent Duo. ❤️"></p>
+            <p id="madeBy" class="made-by">Made With ❤️ By Your Pagal Duo</p>
+            <button id="replayBtn" class="glow-btn replay-btn" type="button">Replay Surprise</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
