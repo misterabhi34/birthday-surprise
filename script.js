@@ -2,9 +2,9 @@ const PASSCODE = "3004";
 
 // Add or remove gallery images here when you place files inside images/gallery/.
 const GALLERY_IMAGES = [
-  "images/gallery/gallery-1.jpg",
-  "images/gallery/gallery-2.jpg",
-  "images/gallery/gallery-3.jpg"
+  "images/gallery/front-page.jpeg",
+  "images/gallery/the-day-we-met-1.jpeg",
+  "images/gallery/the-day-we-met-2.jpeg"
 ];
 
 const pages = {
